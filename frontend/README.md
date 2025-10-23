@@ -21,17 +21,10 @@ npm run build
 npm run preview
 ```
 
-Configuration
-- API base URL is set in `src/lib/api.js`. Change it if your backend runs on another host/port.
+The project configuration is handled by the file /src/lib/api.js in which the base URL of the API is set. This value is adjustable when using a host or port that is different than that of the backend. Vite 7 and React 18 are used in the building of the project, and, therefore, in case of any significant changes in major dependencies, it is recommended to test the development server and production build to confirm stability. Its frontend contains a minimal custom CSS theme in the file: src/styles.css, that is free to be customized to required design preferences.
 
-Notes
-- This project uses Vite 7 and React 18. If you update major dependencies, test the dev server and build.
-- The frontend ships with a small CSS theme (no Tailwind). Feel free to customize `src/styles.css`.
+The project shall be purely local in order to enhance security. It uses a local JSON file as the storage storage behind it which should not be exposed to a production environment unless it is first substituted with a proper database and authentication system.
 
-Security
-- For local development the project uses a local JSON file backend. Don't expose this backend to production without replacing it with a proper database and auth.
+When things are wrong or there are warnings during installation, e.g. in the case of an npm audit, you can also check it with npm audit and make safe updates with npm audit fix. The use of the -force flag is only recommended in cases where you can test and ensure that the breaking changes will not impact on functionality.
 
-Troubleshooting
-- If you see npm audit warnings, run `npm audit` to inspect, and `npm audit fix` to apply safe updates. Use `--force` only when you can test breaking changes.
-
-Enjoy! Create tasks from the left column and view/edit them from the list.
+As soon as installed, you can easily add new tasks (using the left column) and see or update them (using the task list) which makes it an easy but powerful failsafe tool in task management on the local level.
