@@ -1,38 +1,7 @@
-# Task Manager (Full Stack)
+The application under consideration is the Task Manager (Full Stack) project which is a small demonstration of a full-stack. It is made up of a backend written in Express.js, which stores the tasks in a local database using the name of the file, db.json, and a frontend written in Vite/React that gives the user interface which communicates with the backend API. The application is meant to be used locally in development and demonstration, whereby users are able to create and view tasks as well as maintain them via a simple interface that is linked to an API endpoint.
 
-A small full-stack task manager demo app.
+The default configuration is that the frontend is in contact with the backend located at the address of `http://localhost:4000/api, and the frontend is located at the address of http://localhost:3000. The ports are configurable by changing the value of the PORT variable in the backend version of the application: backend/app.js and the base URL in the frontend version of the application: frontend/src/lib/api.js.
 
-Structure
-- backend/ — Express API storing tasks in a local `db.json` file
-- frontend/ — Vite + React frontend (UI) consuming the backend API
+This project is not intended to be used for authentication and high-level security since it is designed with the intention of being used locally and in an educational context. The storage of data is done in a JSON file instead of full database system. The development tooling is currently updated to Vite 7 and its corresponding plugins to address the vulnerabilities that have been reported before. It is possible to execute the command npm audit in both the frontend and the backend directory to generate the security report locally.
 
-Quick start (local development)
-1. Start the backend:
-```powershell
-cd backend
-npm install
-node app.js
-# or: npm start if you have a start script
-```
-
-2. Start the frontend (new terminal):
-```powershell
-cd frontend
-npm install
-npm run dev
-```
-
-Open the frontend at http://localhost:3000. The frontend will talk to the backend at http://localhost:4000/api by default.
-
-Notes
-- This project is for demo/local development only. The backend uses a JSON file for persistence and has no authentication.
-- To change ports edit `backend/app.js` (PORT) and `frontend/src/lib/api.js` (base URL).
-
-Security & audits
-- I upgraded dev tooling to Vite 7 and related plugins to clear reported vulnerabilities. Run `npm audit` in both `frontend` and `backend` if you want a local report.
-
-Contributing
-- Feel free to open issues or PRs with improvements (tests, docker, CI, authentication, DB backend).
-
-Contact
-- N/A — local project
+Pull requests are always welcome - be it to add a new feature, introduce authentication, add an appropriate database, to set up continuous integration or to containerize with Docker. The project can be enhanced and collaborated.
